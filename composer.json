@@ -1,0 +1,20 @@
+{
+    "name": "hexlet/code",
+    "bin": [
+      "bin/gendiff"
+    ],
+    "autoload": {
+        "files": [
+            "src/Cli.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Mallariel",
+            "email": "aleksey.khomenko.95@gmail.com"
+        }
+    ],
+    "require": {
+        "docopt/docopt": "^1.0"
+    }
+}
