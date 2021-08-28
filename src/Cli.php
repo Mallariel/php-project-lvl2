@@ -3,6 +3,7 @@
 namespace Gendiff\Cli;
 
 use Docopt;
+use function Gendiff\Gendiff\gendiff;
 
 function run()
 {
@@ -21,4 +22,10 @@ function run()
     DOC;
 
     $args = Docopt::handle($doc, array('version'=>'Gendiff 0.0.1'));
+
+    $format = $args->args['--format'];
+    $pathToFirstFile = $args->args['<firstFile>'];
+    $pathToSecondFile = $args->args['<secondFile>'];
+
+    echo gendiff($pathToFirstFile, $pathToSecondFile, $format) . "\n";
 }
